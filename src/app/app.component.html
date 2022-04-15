@@ -1,0 +1,94 @@
+<router-outlet></router-outlet>
+<!--<html>
+  <body>
+    <div class="titulo-container">
+      <h3>My Anime List!</h3>
+    </div>
+    
+    <div class="operacoes-container">
+      <div *ngIf="!edicao; else editarProduto">
+        <h3> Adicionar anime à sua lista!</h3>
+      </div>  
+        <ng-template #editarProduto>
+          <h3>Editar info de um anime da lisa!</h3>
+        </ng-template>
+        <div class="form">
+          <label>Nome: </label><br>
+          <input type="text" [(ngModel)]="name"><br>
+          <label for="singleSelect">Gênero: </label><br>
+            <select name="singleSelect" [(ngModel)]="gender">
+              <option value="Fantasia">Fantasia</option>
+              <option value="Comédia">Comédia</option>
+              <option value="Comédia-Romântica">Comédia-Romântica</option>
+              <option value="Luta">Luta</option>
+              <option value="Isekai">Isekai</option>
+              <option value="Aventura">Aventura</option>
+              <option value="Distopia">Distopia</option>
+              <option value="Mistério">Mistério</option>
+              <option value="Terror">Terror</option>
+            </select><br>
+          <label>Estúdio:</label><br>
+          <input type="text" [(ngModel)]="studio"><br>
+          <label>Ano de Lançamento:</label>
+          <input type="number" [(ngModel)]="launch_date"><br>
+          <label>Número de Episódios:</label>
+          <input type="number" [(ngModel)]="number_episodes"><br>
+          <label for="singleSelect">Plataforma de Transmissão: </label><br>
+            <select name="singleSelect" [(ngModel)]="streaming_platform">
+              <option value="Crunchyroll">Crunchyroll</option>
+              <option value="Funimation">Funimation</option>
+              <option value="Daisuki">Daisuki</option>
+              <option value="Netflix">Netflix</option>
+            </select><br>
+          <label>Descrição:</label><br>
+          <input type="text" [(ngModel)]="description"><br>
+          <label for="singleSelect">Classificação Indicativa: </label><br>
+            <select name="singleSelect" [(ngModel)]="classification">
+              <option value="Livre">Livre</option>
+              <option value="12">12</option>
+              <option value="14">14</option>
+              <option value="16">16</option>
+              <option value="18">18</option>
+          </select><br>
+        </div>
+        
+        <button (click)="salvar()">Salvar</button>
+        
+    </div>
+    
+    <div class="list-container">
+
+      <table>
+        <tr>
+          <th>Nome </th>
+          <th>Gênero </th>
+          <th>Estúdio </th>
+          <th>Ano de Lançamento </th>
+          <th>Número de Episódios </th>
+          <th>Plataforma de Transmissão</th>
+          <th>Descrição </th>
+          <th>Classificação </th>
+          <th>Operação </th>
+        </tr>
+        <tr *ngFor="let Anime of lista_animes; let i = index">
+          <td>{{ Anime.getName() }}</td>
+          <td>{{ Anime.getGender() }}</td>
+          <td>{{ Anime.getStudio() }}</td>
+          <td>{{ Anime.getLaunchDate() }}</td>
+          <td>{{ Anime.getNumberEpisodes() }}</td>
+          <td>{{ Anime.getStreamingPlatform() }}</td>
+          <td>{{ Anime.getDescription() }}</td>
+          <td>{{ Anime.getClassification() }}</td>
+          <div class="botoes-container">
+            <td>
+              <button (click)="excluir(i)">Excluir</button>
+              <button (click)="editar(i)">Editar</button>
+            </td>
+          </div>
+        </tr>
+      </table>
+    </div>
+
+
+  </body>
+</html>-->

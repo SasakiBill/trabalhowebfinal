@@ -1,0 +1,70 @@
+body {
+  background-image: url(./final.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+  
+.bg-text {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: relative;
+  top: 0vw;
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner-container{
+  background-image: url(./headerlegalnovo.png);
+  height: 18vw;
+  width: 95vw;
+  margin-left: 0.10vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 0vw;
+}
+  
+
+button{
+  background-color: #B0E1FF;
+  color: #000;
+  padding: 10px 10px 10px 10px; 
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.buttons-container{
+  margin-top: 1vw;
+}
+
+button:hover{
+  background-color: #FFDAF5 ;
+  color: #000;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+th{
+  background-color: #FFDAF5;
+}
+
+table, th, td {
+  border: 1px solid;
+  border-style: groove;
+  border-color: #fff;
+  border-radius: 1vw;
+}
+
+table{
+  background-color: #B0E1FF;
+  width: auto;
+  color: #000;
+}
+

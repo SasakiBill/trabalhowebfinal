@@ -1,0 +1,122 @@
+html{
+    background-image: url(./wp7160100.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+
+.titulo-container{
+    width: fit-content;
+    margin-left: 20vw;  
+    border-radius: 4px;
+}
+
+.titulo-container h1{
+    font-size: 3vw;
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
+    
+}
+
+form{
+    font-size: 1vw;
+    border-radius: 1vw;
+    margin-left: 20vw;
+    margin-top: 2vw;
+   
+}
+
+form label{
+    color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display:block;
+    clear:both;
+}
+
+form input[type=text]{
+    width: 20vw;
+    padding: 10px 16px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type=password]{
+    width: 20vw;
+    padding: 10px 16px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button{
+    font-style: bold;
+    margin-left: 5vw;
+    color: #000;
+    display: grid;
+    padding: 10px 5px;
+    margin-top: 2vw;
+    text-align: center;
+    font-size: 1.2vw;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+button:hover{
+    background-color: #F4D44E;
+    color: #000;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+a{
+    font-style: bold;
+    color: red;
+    margin-top: -2vw;
+    display: grid;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2vw;
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+select{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0 1em 0 0;
+    width: 20vw;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    text-align: center;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:hover{
+    cursor: grab;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+a:hover{
+    background-color: #F4D44E;
+    color: #000;
+    transition: 0.5s;
+    cursor: pointer;
+}

@@ -1,0 +1,47 @@
+<body>
+    <div class="bg-text">
+        <div class="banner-container"></div>
+        <div class="buttons-container">
+            <button (click)="irParaPaginaInicial()">Página Inicial</button> 
+            <button (click)="irParaCriarAnime()">Adicionar Anime!</button>
+            <button>Sobre</button>
+            <button (click)="logout()">Sair</button>
+        </div>  
+        <table>
+            <tr>
+                <th>Nome </th>
+                <th>Gênero </th>
+                <th>Estúdio </th>
+                <th>Ano de Lançamento </th>
+                <th>Número de Episódios </th>
+                <th>Plataforma de Transmissão</th>
+                <th>Descrição </th>
+                <th>Classificação </th>
+                <th>Operação </th>
+                <th>Imagem</th>
+                
+            </tr>
+            <tr *ngFor="let anime of lista_animes; let i = index">
+                <td>{{ anime.name }}</td>
+                <td>{{ anime.gender }}</td>
+                <td>{{ anime.studio }}</td>
+                <td>{{ anime.launch_date}}</td>
+                <td>{{ anime.number_episodes }}</td>
+                <td>{{ anime.streaming_platform }}</td>
+                <td>{{ anime.description }}</td>
+                <td>{{ anime.classification }}</td>
+                <td>
+                    <button (click) = "excluir(anime)">Excluir</button>
+                    <button (click) = "editar(anime)">Editar</button>
+                </td>
+               <td>
+                   <img src="{{ anime.imagem}}">
+                  
+                </td>
+            </tr>
+    
+        </table>    
+    </div>
+
+    
+</body>

@@ -1,0 +1,38 @@
+<body>
+    <div class="titulo-container">
+        <h1>Login no My AnimeS List</h1>
+    </div>
+    
+    <form [formGroup]="formLogin" (ngSubmit)="submitForm()">
+        <label>Email: </label>
+        <input type="text" formControlName="email"><br>
+        <div *ngIf="formLogin.controls['email'].touched">
+            <small *ngIf="formLogin.controls['email'].hasError('email')">
+                Campo email requer 5 caracteres!
+            </small>
+            <small *ngIf="formLogin.controls['email'].hasError('required')">
+                Campo email é obrigatório!
+            </small>
+        </div>
+        
+        <label>Senha: </label>
+        <input type="password" formControlName="password"><br>
+        <div *ngIf="formLogin.controls['password'].touched">
+            <small *ngIf="formLogin.controls['password'].hasError('required')" style="color: red">
+                Campo password é obrigatório!
+            </small>
+            <small *ngIf="formLogin.controls['password'].hasError('minLength')" style="color: red">
+                Campo password precisa ter ao minimo seis caracteres!
+            </small>
+          
+        </div>
+        <button type="submit">Logar</button><br>
+        <button (click)="loginGoogleAccount()"> Realizar Login via Google</button><br>
+        <a routerLink="/cadastro">Não tem cadastro? Clique aqui</a>
+    </form>
+    
+    <div class="footer">
+        <h1>©  TOEI ANIMATION Co., Ltd. All Rights Reserved.</h1>
+    </div>
+    
+</body>

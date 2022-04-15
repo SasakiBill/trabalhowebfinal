@@ -1,0 +1,49 @@
+<body>
+    <div class="titulo-container">
+        <h1>Cadastrar</h1>
+    </div>
+    
+    <form [formGroup]="formCadastrar" (ngSubmit)="submitForm()">
+        <label>Email: </label>
+        <input type="text" formControlName="email"><br>
+        <div *ngIf="formCadastrar.controls['email'].touched">
+            <small *ngIf="formCadastrar.controls['email'].hasError('email')">
+                Campo email requer 5 caracteres!
+            </small>
+            <small *ngIf="formCadastrar.controls['email'].hasError('required')">
+                Campo email é obrigatório!
+            </small>
+        </div>
+    
+        <label>Senha: </label>
+        <input type="password" formControlName="password"><br>
+        <div *ngIf="formCadastrar.controls['password'].touched">
+            <small *ngIf="formCadastrar.controls['password'].hasError('required')">
+                Campo password é obrigatório!
+            </small>
+            <small *ngIf="formCadastrar.controls['password'].hasError('minLength')">
+                Campo password precisa ter ao minimo seis caracteres!
+            </small>
+      
+        </div>
+
+        <label>Confirmar Senha:</label>
+        <input type="password" formControlName="confirmPassword"><br>
+        <div *ngIf="formCadastrar.controls['password'].touched">
+            <small *ngIf="formCadastrar.controls['confirmPassword'].hasError('required')">
+                Campo confirmação de senha é obrigatório!
+            </small>
+            <small *ngIf="formCadastrar.controls['confirmPassword'].hasError('minLength')">
+                Campo confirmação de senha precisa ter ao minimo seis caracteres!
+            </small>
+            <small *ngIf="formCadastrar.controls['confirmPassword'].value!= formCadastrar.controls['password'].value" style="color: red">
+                As senhas precisam ser iguais!
+            </small>
+        </div>
+        <button type="submit">Cadastrar</button>
+        <a routerLink="/login">Voltar para a Tela de Login</a>
+    </form>
+
+    
+    
+</body>
