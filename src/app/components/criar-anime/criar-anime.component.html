@@ -4,7 +4,7 @@
             <h1>Adicionar Anime ao Repositório</h1>
         </div>
             <form [formGroup]="formAnime" (ngSubmit)="submitForm()">
-                <label>Name: </label>
+                <label>Nome: </label>
                 <input type="text" formControlName="name"><br>
                 <div *ngIf="formAnime.controls['name'].touched">
                     <small *ngIf="formAnime.controls['name'].hasError('minlength')" style="color: red;">
@@ -92,8 +92,8 @@
                     </small>
                 </div>
 
-                <label>Imagem: </label>
-                <input type="file" formControlName="imagem" (change)="uploadFile($event)">
+                <label>Imagem: (Apenas arquivos .png e .jpg)</label>
+                <input type="file" formControlName="imageURL" (change)="uploadFile($event)" accept=".png,.jpg">
                
                 <button type="submit">Salvar!</button>
                 <a href="javascript:void(0)" (click)="backClicked()">Voltar</a>

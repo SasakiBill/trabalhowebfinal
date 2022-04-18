@@ -1,9 +1,10 @@
-html{
+body{
     background-image: url(./wp7160100.png);
+    background-position: center;
+    background-repeat: repeat;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+    overflow-x: hidden;
+    color: white;
 }
 
 
@@ -30,7 +31,7 @@ form{
 }
 
 form label{
-    color: black;
+    color: white;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     display:block;
     clear:both;
@@ -47,6 +48,17 @@ form input[type=text]{
 }
 
 form input[type=password]{
+    width: 20vw;
+    padding: 10px 16px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+form input[type=number]{
     width: 20vw;
     padding: 10px 16px;
     margin: 10px 0;

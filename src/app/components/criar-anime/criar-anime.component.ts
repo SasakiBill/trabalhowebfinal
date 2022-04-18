@@ -5,7 +5,6 @@ import { anime } from 'src/app/models/anime';
 import { AnimesService } from 'src/app/services/animeService.service';
 import { Location } from '@angular/common';
 import { AnimeFirebaseService } from 'src/app/services/animes-firebase.service';
-import { ImagemService } from 'src/app/services/imagem.service';
 
 @Component({
   selector: 'app-criar-anime',
@@ -16,8 +15,9 @@ export class CriarAnimeComponent implements OnInit {
   public formAnime : FormGroup;
 
   constructor(private _location: Location, private _router : Router, 
-    private animeService : AnimeFirebaseService, private _formBuilder : FormBuilder, private imagemService : ImagemService) 
+    private animeService : AnimeFirebaseService, private _formBuilder : FormBuilder) 
     { 
+
     this.formAnime = this._formBuilder.group({
       name : ["", [Validators.required, Validators.minLength(4)]],
       gender : ["", [Validators.required]], 
@@ -27,7 +27,7 @@ export class CriarAnimeComponent implements OnInit {
       streaming_platform : ["", [Validators.required]],
       description : ["", [Validators.required]],
       classification : ["", [Validators.required]],
-      imagem : [""]
+      imageURL : [""]
     })
   }
 
@@ -52,7 +52,7 @@ export class CriarAnimeComponent implements OnInit {
 
   public salvar()
   {
-    this.animeService.createAnime(this.formAnime.value)
+    this.animeService.deleteAnime(this.formAnime.value)
     .then(() =>{
       alert("Anime salvo com sucesso!");
       this._router.navigate(["/listaDeAnimes"]);
@@ -66,7 +66,7 @@ export class CriarAnimeComponent implements OnInit {
   {
     const target = event.target as HTMLInputElement;
     const file : File = (target.files as FileList)[0];
-    this.imagemService.uploadStorage(file)
+    this.animeService.uploadStorage(file, this.formAnime.value)
     .then((data)=>{console.log(data)})
     .catch((error)=>{console.log(error)})
   }

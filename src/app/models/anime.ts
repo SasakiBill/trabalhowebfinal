@@ -9,7 +9,7 @@ export class anime
     streaming_platform?: string[];
     description?: string;
     classification?: number[];
-    imagem?: File;
+    imageURL?: string;
 
     /*constructor(name: string, gender: string[], studio: string, launch_date: number, number_episodes: number, streaming_platform: string[],description: string, classification: number[])
     {

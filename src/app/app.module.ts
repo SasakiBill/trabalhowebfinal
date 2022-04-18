@@ -14,6 +14,7 @@ import { ListaDeAnimesComponent } from './components/lista-de-animes/lista-de-an
 import { environment } from 'src/environments/environment.prod';
 import { LoginComponent } from './components/login/login.component';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
+import { AboutAnimeComponent } from './components/about-anime/about-anime.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
     EditarAnimeComponent,
     ListaDeAnimesComponent,
     LoginComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    AboutAnimeComponent
   ],
   imports: [
     BrowserModule,

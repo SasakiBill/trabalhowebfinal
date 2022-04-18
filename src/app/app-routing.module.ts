@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { CriarAnimeComponent } from './components/criar-anime/criar-anime.component';
 import { EditarAnimeComponent } from './components/editar-anime/editar-anime.component';
+import { AboutAnimeComponent } from './components/about-anime/about-anime.component';
 import { ListaDeAnimesComponent } from './components/lista-de-animes/lista-de-animes.component';
 import { LoginComponent } from './components/login/login.component';
 import { UsuarioGuard } from './services/usuario.guard';
@@ -16,6 +17,8 @@ const routes: Routes = [
   canActivate : [UsuarioGuard]},
   {path:'editarAnime/:indice', component: EditarAnimeComponent,
   canActivate : [UsuarioGuard]},
+  {path:'aboutAnime', component: AboutAnimeComponent,
+  canActivate: [UsuarioGuard]},
   {path:'**', redirectTo:"/login"},
   {path:'', redirectTo:"/login", pathMatch:"full"}
 ];

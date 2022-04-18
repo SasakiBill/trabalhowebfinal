@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { FacebookAuthProvider } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,10 @@ export class UsarioService {
     return this.authLoginProvider(new GoogleAuthProvider()).then((data) =>{
       this.storage.setItem("condicao", "autenticado");
     });
+  }
+
+  loginFacebook() {
+    return this.authLoginProvider(new FacebookAuthProvider());
   }
 
   authLoginProvider(provider: any)

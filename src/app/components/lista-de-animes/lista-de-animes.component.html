@@ -4,11 +4,12 @@
         <div class="buttons-container">
             <button (click)="irParaPaginaInicial()">Página Inicial</button> 
             <button (click)="irParaCriarAnime()">Adicionar Anime!</button>
-            <button>Sobre</button>
+            <button (click)="irParaSobrePagina()">Sobre</button>
             <button (click)="logout()">Sair</button>
         </div>  
         <table>
             <tr>
+                <th>Imagem</th>
                 <th>Nome </th>
                 <th>Gênero </th>
                 <th>Estúdio </th>
@@ -18,10 +19,12 @@
                 <th>Descrição </th>
                 <th>Classificação </th>
                 <th>Operação </th>
-                <th>Imagem</th>
                 
             </tr>
             <tr *ngFor="let anime of lista_animes; let i = index">
+                <td>
+                    <img style="width: 70%;" src="{{ anime.imageURL }}">
+                 </td>
                 <td>{{ anime.name }}</td>
                 <td>{{ anime.gender }}</td>
                 <td>{{ anime.studio }}</td>
@@ -34,10 +37,8 @@
                     <button (click) = "excluir(anime)">Excluir</button>
                     <button (click) = "editar(anime)">Editar</button>
                 </td>
-               <td>
-                   <img src="{{ anime.imagem}}">
-                  
-                </td>
+               
+                
             </tr>
     
         </table>    

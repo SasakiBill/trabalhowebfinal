@@ -1,21 +1,22 @@
+<html>
 
-<div class="bg-image"></div>
+<body>
+    <div class="titulo-container">
+        <h1>Editar Anime do Repositório</h1>
+    </div>
+        <form [formGroup]="formEditar" (ngSubmit)="submitForm()">
+            <label>Name:</label>
+            <input type="text" formControlName="name"><br>
+            <div *ngIf="formEditar.controls['name'].touched">
+                <small *ngIf="formEditar.controls['name'].hasError('minlength')" style="color: red;">
+                    Campo do nome requer ao menos 4 caractéres!
+                </small>
+                <small *ngIf="formEditar.controls['name'].hasError('required')" style="color: red;">
+                    Campo nome é obrigatório!
+                </small>
+            </div>
 
-<div class="bg-text">
-    <h1>Editar Anime do Repositório</h1>
-    <form [formGroup]="formEditar" (ngSubmit)="submitForm()">
-        <label>Name:</label>
-        <input type="text" formControlName="name"><br>
-        <div *ngIf="formEditar.controls['name'].touched">
-            <small *ngIf="formEditar.controls['name'].hasError('minlength')" style="color: red;">
-                Campo do nome requer ao menos 4 caractéres!
-            </small>
-            <small *ngIf="formEditar.controls['name'].hasError('required')" style="color: red;">
-                Campo nome é obrigatório!
-            </small>
-        </div>
-
-        <label for="singleSelect">Gênero: </label><br>
+            <label for="singleSelect">Gênero: </label><br>
             <select name="singleSelect" formControlName="gender">
                 <option value="Fantasia">Fantasia</option>
                 <option value="Comédia">Comédia</option>
@@ -27,58 +28,58 @@
                 <option value="Mistério">Mistério</option>
                 <option value="Terror">Terror</option>
             </select><br>
-        <div  *ngIf="formEditar.controls['gender'].touched">
-            <small *ngIf="formEditar.controls['gender'].hasError('required')" style="color: red;">
-                Campo nome é obrigatório!
-            </small>
-        </div>
+            <div *ngIf="formEditar.controls['gender'].touched">
+                <small *ngIf="formEditar.controls['gender'].hasError('required')" style="color: red;">
+                    Campo nome é obrigatório!
+                </small>
+            </div>
 
-        <label>Estúdio: </label>
-        <input type="text" formControlName="studio"><br>
-        <div *ngIf="formEditar.controls['studio'].touched">
-            <small *ngIf="formEditar.controls['studio'].hasError('required')" style="color: red;">
-                Campo Estúdio é obrigatório!
-            </small>
-        </div>
+            <label>Estúdio: </label>
+            <input type="text" formControlName="studio"><br>
+            <div *ngIf="formEditar.controls['studio'].touched">
+                <small *ngIf="formEditar.controls['studio'].hasError('required')" style="color: red;">
+                    Campo Estúdio é obrigatório!
+                </small>
+            </div>
 
-        <label>Ano de Lançamento: </label>
-        <input type="number" formControlName="launch_date"><br>
-        <div *ngIf="formEditar.controls['launch_date'].touched">
-            <small *ngIf="formEditar.controls['launch_date'].hasError('required')" style="color: red;">
-                Campo Ano de Lançamento é obrigatório!
-            </small>
-        </div>
+            <label>Ano de Lançamento: </label>
+            <input type="number" formControlName="launch_date"><br>
+            <div *ngIf="formEditar.controls['launch_date'].touched">
+                <small *ngIf="formEditar.controls['launch_date'].hasError('required')" style="color: red;">
+                    Campo Ano de Lançamento é obrigatório!
+                </small>
+            </div>
 
-        <label>Número de Episódios: </label>
-        <input type="number" formControlName="number_episodes"><br>
-        <div *ngIf="formEditar.controls['number_episodes'].touched">
-            <small *ngIf="formEditar.controls['number_episodes'].hasError('required')" style="color: red;">
-                Campo Número de Episódios é obrigatório!
-            </small>
-        </div>
+            <label>Número de Episódios: </label>
+            <input type="number" formControlName="number_episodes"><br>
+            <div *ngIf="formEditar.controls['number_episodes'].touched">
+                <small *ngIf="formEditar.controls['number_episodes'].hasError('required')" style="color: red;">
+                    Campo Número de Episódios é obrigatório!
+                </small>
+            </div>
 
-        <label for="singleSelect">Plataforma de Transmissão: </label><br>
+            <label for="singleSelect">Plataforma de Transmissão: </label><br>
             <select name="singleSelect" formControlName="streaming_platform">
                 <option value="Crunchyroll">Crunchyroll</option>
                 <option value="Funimation">Funimation</option>
                 <option value="Daisuki">Daisuki</option>
                 <option value="Netflix">Netflix</option>
             </select><br>
-        <div  *ngIf="formEditar.controls['streaming_platform'].touched">
-            <small *ngIf="formEditar.controls['streaming_platform'].hasError('required')" style="color: red;">
-                Campo Plataforma de Transmissão é obrigatório!
-            </small>
-        </div>
+            <div *ngIf="formEditar.controls['streaming_platform'].touched">
+                <small *ngIf="formEditar.controls['streaming_platform'].hasError('required')" style="color: red;">
+                    Campo Plataforma de Transmissão é obrigatório!
+                </small>
+            </div>
 
-        <label>Descrição: </label>
-        <input type="text" formControlName="description"><br>
-        <div *ngIf="formEditar.controls['description'].touched">
-            <small *ngIf="formEditar.controls['description'].hasError('required')" style="color: red;">
-                Campo Descrição é obrigatório!
-            </small>
-        </div>
+            <label>Descrição: </label>
+            <input type="text" formControlName="description"><br>
+            <div *ngIf="formEditar.controls['description'].touched">
+                <small *ngIf="formEditar.controls['description'].hasError('required')" style="color: red;">
+                    Campo Descrição é obrigatório!
+                </small>
+            </div>
 
-        <label for="singleSelect">Classificação Indicativa: </label><br>
+            <label for="singleSelect">Classificação Indicativa: </label><br>
             <select name="singleSelect" formControlName="classification">
                 <option value="Livre">Livre</option>
                 <option value="12">12</option>
@@ -86,17 +87,17 @@
                 <option value="16">16</option>
                 <option value="18">18</option>
             </select><br>
-        <div  *ngIf="formEditar.controls['classification'].touched">
-            <small *ngIf="formEditar.controls['classification'].hasError('required')" style="color: red;">
-                Campo Classificação Indiciativa é obrigatório!
-            </small>
-        </div>
+            <div *ngIf="formEditar.controls['classification'].touched">
+                <small *ngIf="formEditar.controls['classification'].hasError('required')" style="color: red;">
+                    Campo Classificação Indiciativa é obrigatório!
+                </small>
+            </div>
 
-        <label>Imagem: </label>
-        <input type="file" formControlName="imagem" (change)="uploadFile($event)">
-        
 
-        <button type="submit">Salvar!</button>
-        <a href="javascript:void(0)" (click)="backClicked()">Voltar</a>
-    </form>
-</div>
+            <button type="submit">Salvar!</button>
+            <a href="javascript:void(0)" (click)="backClicked()">Voltar</a>
+        </form>
+</body>
+
+
+</html>

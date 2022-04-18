@@ -62,4 +62,16 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  loginFacebook()
+  {
+    this.usarioService.loginFacebook().then(()=>{
+      alert("Login efetuado com sucesso!");
+      this._router.navigate(["/listaDeAnimes"]);
+    })
+    .catch((error)=>{
+      alert("Login não foi efetuado com sucesso. Tente novamente");
+      console.log(error);
+    })
+  }
+
 }

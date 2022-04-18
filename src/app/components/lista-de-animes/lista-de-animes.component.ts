@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { anime } from 'src/app/models/anime';
 import { AnimeFirebaseService } from 'src/app/services/animes-firebase.service';
 import { UsarioService } from 'src/app/services/usario.service';
+import { CriarAnimeComponent } from '../criar-anime/criar-anime.component';
 
 @Component({
   selector: 'app-lista-de-animes',
@@ -11,7 +12,7 @@ import { UsarioService } from 'src/app/services/usario.service';
 })
 export class ListaDeAnimesComponent implements OnInit {
   public lista_animes : anime[] = [];
-  public lista_imagens? : any [];
+  public imagem? : any;
 
   constructor(private _router : Router, private usuarioService: UsarioService, 
     private animeService : AnimeFirebaseService) 
@@ -52,6 +53,11 @@ export class ListaDeAnimesComponent implements OnInit {
   public irParaPaginaInicial()
   {
     this._router.navigate(["/listaDeAnimes"]);
+  }
+
+  public irParaSobrePagina()
+  {
+    this._router.navigate(["/aboutAnime"]);
   }
 
   public logout()

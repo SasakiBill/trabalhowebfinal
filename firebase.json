@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/crud-produtos",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
