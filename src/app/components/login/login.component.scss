@@ -1,15 +1,16 @@
 body{
     background-image: url(./loginwallpaperup.png);
+    background-position: center;
+    background-repeat: repeat;
     background-size: cover;
-    -webkit-text-stroke: 0.5px black;
-    -webkit-text-fill-color: black;
-    background-position: 0%;
+    overflow-x: hidden;
 }
 
 .titulo-container{
     width: fit-content;
     margin-left: 20vw;  
     border-radius: 4px;
+    margin-top: 2vw;
 }
 
 .titulo-container h1{
@@ -71,6 +72,8 @@ button{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-left: 6vw;
+    margin-top: 1vw;
 }
 
 form small{
@@ -94,6 +97,10 @@ a{
     text-decoration: none;
     font-size: 1.2vw;
     box-sizing: border-box;
+    width: fit-content;
+    border-radius: 1px;
+    margin-left: 3vw;
+    margin-top: 1vw;
 }
 
 a:hover{

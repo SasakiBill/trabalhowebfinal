@@ -1,15 +1,16 @@
 body{
-    background-size: cover;
     background-image: url(./cadastrarfundo.png);
-    -webkit-text-stroke: 0.5px black;
-    -webkit-text-fill-color: black;
-    background-position: 0%;
+    background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 .titulo-container{
     width: fit-content;
     margin-left: 20vw;  
     border-radius: 4px;
+    margin-top: 2vw;
 }
 
 .titulo-container h1{
